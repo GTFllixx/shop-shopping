@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda - Cámara Bombillo</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #dbe1e8;
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    header {
+      background-color: #1f2937;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+    }
+
+    nav.category-nav {
+      background-color: #f3f4f6;
+      width: 100%;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 2px solid #1f2937;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav.category-nav a {
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav.category-nav a:hover {
+      color: #2563eb;
+    }
+
+    h2.category-title {
+      width: 100%;
+      max-width: 960px;
+      padding: 0 20px;
+      margin: 30px 0 10px;
+      font-size: 26px;
+      color: #1f2937;
+      border-bottom: 2px solid #1f2937;
+      scroll-margin-top: 100px;
+    }
+
+    .products-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 960px;
+      padding: 0 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      margin-bottom: 15px;
+    }
+
+    .product-card h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    .product-card p.price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+
+    .product-card p.description {
+      font-size: 16px;
+      color: #4b5563;
+      margin-top: 0;
+      text-align: left;
+      min-height: 60px;
+      white-space: pre-wrap; /* para que respete saltos de línea */
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #1f2937;
+      color: white;
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 400px) {
+      .product-card {
+        width: 90%;
+      }
+
+      .products-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav.category-nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tienda Creativa</h1>
+  </header>
+
+  <nav class="category-nav">
+    <a href="#hogar">Hogar</a>
+    <a href="#ferreteria">Ferretería</a>
+    <a href="#automotriz">Automotriz</a>
+  </nav>
+
+  <!-- Hogar -->
+  <h2 class="category-title" id="hogar">Hogar</h2>
+  <div class="products-container">
+    <div class="product-card">
+      <img src="imagenes/8177.png" alt="Cámara tipo bombillo" />
+      <h2>Cámara de Seguridad Tipo Bombillo</h2>
+      <p class="price">₡12.000</p>
+      <p class="description">
+        CAMARA VIGILANCIA TIPO BOMBILLO 360 2.4G 2MP HD,SD,INTERCOMUNICADOR,WIFI, DETECTOR MOV.
+      </p>
+    </div>
+
+    <div class="product-card">
+      <img src="imagenes/8006b.png" alt="Cargador de Baterías" />
+      <h2>Cargador de Baterías AA y AAA</h2>
+      <p class="price">₡7000</p>
+      <p class="description">
+        Cargador de baterías AA y AAA Incluidas.
+      </p>
+    </div>
+
+    <div class="product-card">
+      <img src="imagenes/lr06.png" alt="Baterías AA" />
+      <h2>Baterías AA</h2>
+      <p class="price">₡750</p>
+      <p class="description">
+        Paquete de 4 baterías AA alcalinas de larga duración para dispositivos electrónicos.
+      </p>
+    </div>
+
+    <div class="product-card">
+      <img src="imagenes/lr03.png" alt="Baterías AAA" />
+      <h2>Baterías AAA</h2>
+      <p class="price">₡750</p>
+      <p class="description">
+        Paquete de 4 baterías AAA alcalinas ideales para controles remotos y pequeños aparatos.
+      </p>
+    </div>
+  </div>
+
+  <!-- Ferretería -->
+  <h2 class="category-title" id="ferreteria">Ferretería</h2>
+  <div class="products-container">
+    <div class="product-card">
+      <img src="imagenes/830.png" alt="Tester" />
+      <h2>Tester</h2>
+      <p class="price">₡6000</p>
+      <p class="description">
+        Instrumento multifuncional para medir voltaje, corriente y continuidad eléctrica.
+      </p>
+    </div>
+
+    <div class="product-card">
+      <img src="imagenes/826.png" alt="Linterna Recargable" />
+      <h2>Linterna Recargable</h2>
+      <p class="price">₡4500</p>
+      <p class="description">
+        Linterna LED con batería recargable.
+      </p>
+    </div>
+  </div>
+
+  <!-- Automotriz -->
+  <h2 class="category-title" id="automotriz">Automotriz</h2>
+  <div class="products-container">
+    <div class="product-card">
+      <img src="imagenes/450.png" alt="Gata tijera 2ton" />
+      <h2>Gata tijera 2Ton</h2>
+      <p class="price">₡15000</p>
+      <p class="description">
+        Elevador mecánico con capacidad de 2 toneladas para mantenimiento de vehículos.
+      </p>
+    </div>
+
+    <div class="product-card">
+      <img src="imagenes/200161.png" alt="Coolant Verde" />
+      <h2>Coolant Verde Galón</h2>
+      <p class="price">₡2500</p>
+      <p class="description">
+        Refrigerante para motor con protección contra corrosión y sobrecalentamiento.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Tienda Creativa - Todos los derechos reservados<br />
+    <small>Nuestro catálogo está en constante actualización.</small>
+  </footer>
+
+</body>
+</html>
